@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pastelería Mil Sabores — Inicio</title>
+  <meta name="description" content="Pastelería artesanal: tortas, pasteles y postres a pedido." />
+  <link rel="preload" href="media/hero.jpg" as="image" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="media/logo.svg" type="image/svg+xml" />
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="/"><img src="media/logo.svg" alt="Logo Pastelería Mil Sabores" /><span>Mil Sabores</span></a>
+  <nav aria-label="principal">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+    <ul id="menu" class="menu">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="pages/productos.html">Productos</a></li>
+      <li><a href="pages/nosotros.html">Nosotros</a></li>
+      <li><a href="pages/contacto.html" class="btn">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero__content">
+      <h1>Pastelería artesanal hecha con amor</h1>
+      <p>Pedidos a medida para cumpleaños, matrimonios y eventos corporativos.</p>
+      <a class="btn btn-primary" href="pages/productos.html">Ver catálogo</a>
+    </div>
+    <picture>
+      <img src="media/hero.jpg" alt="Torta de chocolate con frutillas" />
+    </picture>
+  </section>
+
+  <section class="features" aria-label="Destacados">
+    <article class="card">
+      <h2>Ingredientes de calidad</h2>
+      <p>Utilizamos insumos frescos y seleccionados, priorizando proveedores locales.</p>
+    </article>
+    <article class="card">
+      <h2>Personalización</h2>
+      <p>Diseñamos tu torta con sabores y decoración a tu gusto.</p>
+    </article>
+    <article class="card">
+      <h2>Entrega puntual</h2>
+      <p>Retiro en tienda o envío a domicilio coordinado.</p>
+    </article>
+  </section>
+
+  <section class="media" aria-label="Video de presentación">
+    <h2>Conócenos en 30 segundos</h2>
+    <video controls poster="media/hero.jpg" width="960">
+      <source src="media/videos/spot.mp4" type="video/mp4" />
+      Tu navegador no soporta vídeo HTML5.
+    </video>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <section>
+      <h3>Mil Sabores</h3>
+      <p>Av. Ejemplo 123, Santiago, Chile</p>
+      <p>Horario: Lun–Sáb 9:00–19:00</p>
+    </section>
+    <section>
+      <h3>Contacto</h3>
+      <ul>
+        <li><a href="tel:+56912345678">+56 9 1234 5678</a></li>
+        <li><a href="mailto:contacto@milsabores.cl">contacto@milsabores.cl</a></li>
+        <li><a href="pages/contacto.html">Formulario</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Síguenos</h3>
+      <ul class="social">
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">TikTok</a></li>
+      </ul>
+    </section>
+  </div>
+  <small>© <span id="year"></span> Pastelería Mil Sabores. Todos los derechos reservados.</small>
+</footer>
+
+<script src="assets/validate.js" defer></script>
+</body>
+</html>

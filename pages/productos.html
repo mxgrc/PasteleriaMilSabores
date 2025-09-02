@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Productos — Mil Sabores</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="/"><img src="../media/logo.svg" alt="Logo Pastelería Mil Sabores" /><span>Mil Sabores</span></a>
+  <nav aria-label="principal">
+    <ul class="menu">
+      <li><a href="/">Inicio</a></li>
+      <li><a aria-current="page" href="#">Productos</a></li>
+      <li><a href="/pages/nosotros.html">Nosotros</a></li>
+      <li><a href="/pages/contacto.html" class="btn">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+  <header class="page-header">
+    <h1>Nuestro catálogo</h1>
+    <p>Selecciona una categoría para filtrar.</p>
+    <div class="filters">
+      <button class="chip" data-filter="all">Todo</button>
+      <button class="chip" data-filter="tortas">Tortas</button>
+      <button class="chip" data-filter="pasteles">Pasteles</button>
+      <button class="chip" data-filter="sin-azucar">Sin azúcar</button>
+    </div>
+  </header>
+
+  <section class="grid productos" aria-label="Listado de productos">
+    <article class="producto" data-cat="tortas">
+      <img src="../media/productos/torta-chocolate.jpg" alt="Torta de chocolate 12 porciones" />
+      <h2>Torta de Chocolate</h2>
+      <p>12 porciones — Relleno ganache.</p>
+      <button class="btn btn-secondary" data-action="agregar">Agregar</button>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small>© <span id="year"></span> Pastelería Mil Sabores.</small>
+</footer>
+
+<script>
+  document.querySelectorAll('.chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.filter;
+      document.querySelectorAll('.producto').forEach(p => {
+        p.style.display = (cat === 'all' || p.dataset.cat === cat) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
