@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Productos — Mil Sabores</title>
+  <title>Catálogo — Mil Sabores</title>
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
@@ -22,9 +22,9 @@
 <main id="main">
   <header class="page-header">
     <h1>Nuestro catálogo</h1>
-    <p>Selecciona una categoría para filtrar.</p>
+    <p>Selecciona una categoría para filtrar los productos.</p>
     <div class="filters">
-      <button class="chip" data-filter="all">Todo</button>
+      <button class="chip active" data-filter="all">Todo</button>
       <button class="chip" data-filter="tortas">Tortas</button>
       <button class="chip" data-filter="pasteles">Pasteles</button>
       <button class="chip" data-filter="sin-azucar">Sin azúcar</button>
@@ -32,12 +32,52 @@
   </header>
 
   <section class="grid productos" aria-label="Listado de productos">
+
+    <!-- Tortas -->
     <article class="producto" data-cat="tortas">
-      <img src="../media/productos/torta-chocolate.jpg" alt="Torta de chocolate 12 porciones" />
+      <img src="https://amoradulce.com/wp-content/uploads/2019/12/Torta-chocolate-1_04_13_2024-scaled.jpg" alt="Torta de chocolate" />
       <h2>Torta de Chocolate</h2>
       <p>12 porciones — Relleno ganache.</p>
-      <button class="btn btn-secondary" data-action="agregar">Agregar</button>
+      <button class="btn-secondary" data-action="agregar">Agregar</button>
     </article>
+
+    <article class="producto" data-cat="tortas">
+      <img src="https://www.recetaslider.cl/wp-content/uploads/2021/06/principal_5d3627fb4bca3.jpg" alt="Torta de frutilla" />
+      <h2>Torta de Frutilla</h2>
+      <p>10 porciones — Decoración con frutas frescas.</p>
+      <button class="btn-secondary" data-action="agregar">Agregar</button>
+    </article>
+
+    <!-- Pasteles -->
+    <article class="producto" data-cat="pasteles">
+      <img src="https://www.guiaderecetas.com/static/images/receta/torta-de-vainilla.jpg" alt="Pastel de vainilla" />
+      <h2>Pastel de Vainilla</h2>
+      <p>8 porciones — Relleno de crema pastelera.</p>
+      <button class="btn-secondary" data-action="agregar">Agregar</button>
+    </article>
+
+    <article class="producto" data-cat="pasteles">
+      <img src="https://cocinachilena.cl/wp-content/uploads/2013/12/Torta-frutillas-crema-3-scaled.jpg" alt="Pastel de frutilla" />
+      <h2>Pastel de Frutilla</h2>
+      <p>10 porciones — Frutas frescas y crema chantilly.</p>
+      <button class="btn-secondary" data-action="agregar">Agregar</button>
+    </article>
+
+    <!-- Sin azúcar -->
+    <article class="producto" data-cat="sin-azucar">
+      <img src="https://images.aws.nestle.recipes/original/a6ed031a9f243061c74bdc9dc4428230_pastel-de-cumpleanios-sin-azucar.jpg" alt="Pastel sin azúcar" />
+      <h2>Pastel Sin Azúcar</h2>
+      <p>8 porciones — Ideal para diabéticos.</p>
+      <button class="btn-secondary" data-action="agregar">Agregar</button>
+    </article>
+
+    <article class="producto" data-cat="sin-azucar">
+      <img src="https://annaspasteleria.com/images/2020post/_videoCover/DSC_3832web.jpg" alt="Cupcakes sin azúcar" />
+      <h2>Cupcakes Sin Azúcar</h2>
+      <p>Docena — Mini cupcakes saludables.</p>
+      <button class="btn-secondary" data-action="agregar">Agregar</button>
+    </article>
+
   </section>
 </main>
 
@@ -46,14 +86,25 @@
 </footer>
 
 <script>
-  document.querySelectorAll('.chip').forEach(btn => {
+  // Filtro por categoría
+  const chips = document.querySelectorAll('.chip');
+  chips.forEach(btn => {
     btn.addEventListener('click', () => {
       const cat = btn.dataset.filter;
+
+      // Mostrar/ocultar productos
       document.querySelectorAll('.producto').forEach(p => {
         p.style.display = (cat === 'all' || p.dataset.cat === cat) ? '' : 'none';
       });
+
+      // Resaltar botón activo
+      chips.forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
     });
   });
+
+  // Año en el footer
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
