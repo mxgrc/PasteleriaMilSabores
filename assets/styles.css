@@ -26,3 +26,54 @@ a{ color:var(--brand); text-decoration:none; }
 .hint{ color:#666; font-size:.9rem; }
 .error{ color:#b00020; min-height:1em; }
 @media (max-width: 900px){ .hero{ grid-template-columns:1fr; } }
+
+/* Tarjetas de productos */
+.producto {
+  border: 1px solid #eee;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;}
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);}
+.producto img {
+  border-radius: 0.75rem;
+  width: 100%;
+  height: auto;}
+.producto h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--brand);}
+.producto p {
+  margin: 0.25rem 0;
+  color: #555;}
+.producto .btn-secondary {
+  background-color: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s;}
+.producto .btn-secondary:hover {
+  background-color: #5a2a1e;}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;}
+.chip {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--brand);
+  background: #fff;
+  color: var(--brand);
+  cursor: pointer;
+  transition: all 0.2s;}
+.chip:hover,
+.chip.active {
+  background-color: var(--brand);
+  color: #fff;}
