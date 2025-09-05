@@ -3,41 +3,104 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Productos — Mil Sabores</title>
+  <title>Catálogo — Mil Sabores</title>
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="/"><img src="../media/logo.svg" alt="Logo Pastelería Mil Sabores" /><span>Mil Sabores</span></a>
+  <a class="brand" href="../index.html"><img src="../media/logo.png" alt="Logo Pastelería Mil Sabores" /><span></span></a>
   <nav aria-label="principal">
-    <ul class="menu">
-      <li><a href="/">Inicio</a></li>
-      <li><a aria-current="page" href="#">Productos</a></li>
-      <li><a href="/pages/nosotros.html">Nosotros</a></li>
-      <li><a href="/pages/contacto.html" class="btn">Contacto</a></li>
+    <ul id="menu" class="menu">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a aria-current="page" href="">Catálogo</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="login.html" class="btn">Iniciar Sesion</a></li>
     </ul>
   </nav>
 </header>
 
 <main id="main">
   <header class="page-header">
-    <h1>Nuestro catálogo</h1>
-    <p>Selecciona una categoría para filtrar.</p>
+    <h1>Catálogo de Productos</h1>
+    <p>Selecciona una categoría para ver los productos disponibles.</p>
     <div class="filters">
-      <button class="chip" data-filter="all">Todo</button>
-      <button class="chip" data-filter="tortas">Tortas</button>
-      <button class="chip" data-filter="pasteles">Pasteles</button>
-      <button class="chip" data-filter="sin-azucar">Sin azúcar</button>
+      <button class="chip active" data-filter="all">Todo</button>
+      <button class="chip" data-filter="tortas-cuadradas">Tortas Cuadradas</button>
+      <button class="chip" data-filter="tortas-circulares">Tortas Circulares</button>
+      <button class="chip" data-filter="postres-individuales">Postres Individuales</button>
+      <button class="chip" data-filter="sin-azucar">Sin Azúcar</button>
+      <button class="chip" data-filter="pasteleria-tradicional">Pastelería Tradicional</button>
+      <button class="chip" data-filter="sin-gluten">Sin Gluten</button>
+      <button class="chip" data-filter="vegana">Vegana</button>
+      <button class="chip" data-filter="tortas-especiales">Tortas Especiales</button>
     </div>
   </header>
 
-  <section class="grid productos" aria-label="Listado de productos">
-    <article class="producto" data-cat="tortas">
-      <img src="../media/productos/torta-chocolate.jpg" alt="Torta de chocolate 12 porciones" />
-      <h2>Torta de Chocolate</h2>
-      <p>12 porciones — Relleno ganache.</p>
-      <button class="btn btn-secondary" data-action="agregar">Agregar</button>
+  <section class="grid productos">
+
+    <!-- Ejemplo: Tortas Cuadradas -->
+    <article class="producto" data-cat="tortas-cuadradas">
+      <img src="https://i.pinimg.com/736x/d1/e6/49/d1e649ae8884cf9e8eeba48c2599db89.jpg" alt="Torta Cuadrada de Chocolate" />
+      <h2>TC001 - Torta Cuadrada de Chocolate</h2>
+      <p class="precio">$45.000 CLP</p>
+      <p class="descripcion">Deliciosa torta de chocolate con capas de ganache y un toque de avellanas. Personalizable con mensajes especiales.</p>
     </article>
+
+    <article class="producto" data-cat="tortas-cuadradas">
+      <img src="https://i.pinimg.com/1200x/5a/3e/44/5a3e446ea093cd1477b85790e521f58b.jpg" alt="Torta Cuadrada de Frutas" />
+      <h2>TC002 - Torta Cuadrada de Frutas</h2>
+      <p class="precio">$50.000 CLP</p>
+      <p class="descripcion">Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de vainilla, ideal para celebraciones.</p>
+    </article>
+
+    <!-- Tortas Circulares -->
+    <article class="producto" data-cat="tortas-circulares">
+      <img src="https://i.pinimg.com/736x/3e/68/56/3e68563b22627593ca68d5c3f32ac9d1.jpg" alt="Torta Circular de Vainilla" />
+      <h2>TT001 - Torta Circular de Vainilla</h2>
+      <p class="precio">$40.000 CLP</p>
+      <p class="descripcion">Bizcocho de vainilla clásico relleno con crema pastelera y cubierto con glaseado dulce.</p>
+    </article>
+
+    <article class="producto" data-cat="tortas-circulares">
+      <img src="https://i.pinimg.com/1200x/f8/21/54/f82154e4f2e38793ce7af18488d27490.jpg" alt="Torta Circular de Manjar" />
+      <h2>TT002 - Torta Circular de Manjar</h2>
+      <p class="precio">$42.000 CLP</p>
+      <p class="descripcion">Torta tradicional chilena con manjar y nueces, un deleite para los amantes de los sabores clásicos.</p>
+    </article>
+
+    <!-- Postres Individuales -->
+    <article class="producto" data-cat="postres-individuales">
+      <img src="https://i.pinimg.com/1200x/f4/ce/e5/f4cee5e7149731cc9dd440115a194fbf.jpg" alt="Mousse de Chocolate" />
+      <h2>PI001 - Mousse de Chocolate</h2>
+      <p class="precio">$5.000 CLP</p>
+      <p class="descripcion">Postre individual cremoso y suave, hecho con chocolate de alta calidad.</p>
+    </article>
+
+    <article class="producto" data-cat="postres-individuales">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjsJpU_95skNNdIG9JRp8_gBFqEGQ4PAd5aA&s" alt="Tiramisú Clásico" />
+      <h2>PI002 - Tiramisú Clásico</h2>
+      <p class="precio">$5.500 CLP</p>
+      <p class="descripcion">Postre italiano con capas de café, mascarpone y cacao, perfecto para finalizar cualquier comida.</p>
+    </article>
+
+    <!-- Productos Sin Azúcar -->
+    <article class="producto" data-cat="sin-azucar">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoUo8-HIVi28cZg_s7f6Jpo2rKpT5AmPO7zw&s" alt="Torta Sin Azúcar de Naranja" />
+      <h2>PSA001 - Torta Sin Azúcar de Naranja</h2>
+      <p class="precio">$48.000 CLP</p>
+      <p class="descripcion">Torta ligera y deliciosa, endulzada naturalmente, ideal para opciones saludables.</p>
+    </article>
+
+    <article class="producto" data-cat="sin-azucar">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLIMKrseuLvIqLkHtfM7jVZfUQV1Zo7ssyaA&s" alt="Cheesecake Sin Azúcar" />
+      <h2>PSA002 - Cheesecake Sin Azúcar</h2>
+      <p class="precio">$47.000 CLP</p>
+      <p class="descripcion">Suave y cremoso, perfecto para disfrutar sin culpa.</p>
+    </article>
+
+    <!-- Puedes agregar el resto de categorías de la misma forma -->
+
   </section>
 </main>
 
@@ -46,14 +109,21 @@
 </footer>
 
 <script>
-  document.querySelectorAll('.chip').forEach(btn => {
+  // Filtro por categoría
+  const chips = document.querySelectorAll('.chip');
+  chips.forEach(btn => {
     btn.addEventListener('click', () => {
       const cat = btn.dataset.filter;
       document.querySelectorAll('.producto').forEach(p => {
         p.style.display = (cat === 'all' || p.dataset.cat === cat) ? '' : 'none';
       });
+      chips.forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
     });
   });
+
+  // Año en el footer
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
