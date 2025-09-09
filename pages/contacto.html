@@ -5,112 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto — Mil Sabores</title>
   <link rel="stylesheet" href="../assets/styles.css" />
-  <style>
-    /* Estilos específicos para Contacto */
-    main#main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      display: grid;
-      gap: 2rem;
-    }
-
-    .page-header h1 {
-      text-align: center;
-      font-size: 2rem;
-      color: var(--brand);
-    }
-
-    .page-header p {
-      text-align: center;
-      color: #555;
-      font-size: 1rem;
-    }
-
-    .form .actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 1rem;
-    }
-
-    /* Información de contacto al lado del formulario */
-    .info-contacto {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .info-contacto article {
-      border: 1px solid #eee;
-      border-radius: 1rem;
-      padding: 1rem;
-      text-align: center;
-      background: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,.05);
-    }
-
-    .info-contacto h3 {
-      color: var(--brand);
-      margin-bottom: 0.5rem;
-    }
-
-    .form input, .form select, .form textarea {
-      border: 1px solid #ccc;
-      border-radius: .6rem;
-      padding: .65rem .75rem;
-      width: 100%;
-    }
-
-    .form input:focus, .form select:focus, .form textarea:focus {
-      outline: 2px solid var(--brand-2);
-      border-color: var(--brand);
-    }
-
-    .btn {
-      border-radius: 1rem;
-      padding: .75rem 1.2rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn-primary {
-      background: var(--brand);
-      color: #fff;
-      border: none;
-    }
-
-    .btn-primary:hover {
-      background: #5b2a1f;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      border: 1px solid var(--brand);
-      color: var(--brand);
-    }
-
-    .btn-secondary:hover {
-      background: var(--brand-2);
-    }
-  </style>
 </head>
 <body>
 <header class="site-header">
-
   <a class="brand" href="../index.html"><img src="../media/logo.png" alt="Logo Pastelería Mil Sabores" /><span>Mil Sabores</span></a>
   <nav aria-label="principal">
-
     <ul id="menu" class="menu">
       <li><a href="../index.html">Inicio</a></li>
       <li><a href="productos.html">Catálogo</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
       <li><a aria-current="page" href="">Contacto</a></li>
-
       <li><a href="login.html" class="btn">Iniciar Sesión</a></li>
-
     </ul>
   </nav>
 </header>
@@ -194,9 +99,5 @@
 </footer>
 
 <script src="../assets/validate.js" defer></script>
-<script>
-  // Año automático
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 </body>
 </html>
