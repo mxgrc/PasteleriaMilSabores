@@ -125,10 +125,8 @@
 </footer>
 
 <script>
-  // Año automático
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Verifica si hay usuario logueado
   const usuario = localStorage.getItem("usuarioLogueado");
   const loginMenu = document.getElementById("loginMenu");
   const usuarioHeader = document.getElementById("usuarioHeader");
@@ -136,14 +134,12 @@
   const logoutBtn = document.getElementById("logoutBtn");
 
   if(usuario){
-    // Oculta "Iniciar Sesión"
     loginMenu.style.display = "none";
 
-    // Muestra el usuario y botón de cerrar sesión
     usuarioHeader.style.display = "inline-flex";
     usuarioNombre.textContent = "Hola, " + usuario;
 
-    // Evento cerrar sesión
+
     logoutBtn.addEventListener("click", () => {
       localStorage.removeItem("usuarioLogueado");
       alert("Has cerrado sesión.");
