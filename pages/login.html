@@ -1,56 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contacto — Mil Sabores</title>
-  <link rel="stylesheet" href="../assets/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Pastelería Mil Sabores</title>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="../index.html"><img src="../media/logo.png" alt="Logo Pastelería Mil Sabores" /><span></span></a>
-  <nav aria-label="principal">
-    
-    <ul id="menu" class="menu">
-      <li><a href="../index.html">Inicio</a></li>
-      <li><a href="productos.html">Catálogo</a></li>
-      <li><a href="nosotros.html">Nosotros</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a aria-current="page" href="" class="btn">Iniciar Sesion</a></li>
-    </ul>
-  </nav>
-</header>
+  <header class="site-header">
+    <h1>🍰 Pastelería Mil Sabores</h1>
+  </header>
 
-<main id="main">
-  <header class="page-header"><h1>Registrate</h1></header>
-  <form id="login" class="form" novalidate>
-    <div class="field">
-      <label for="email">Correo</label>
-      <input id="email" name="email" type="email" autocomplete="email" required />
-      <small class="hint">Usaremos este correo para responderte.</small>
-      <p class="error" aria-live="polite"></p>
-    </div>
-    <div class="field">
-      <label for="telefono">Teléfono</label>
-      <input id="telefono" name="telefono" type="tel" autocomplete="tel" pattern="^\+?\d{8,15}$" />
-      <small class="hint">Solo números, puede incluir +56</small>
-      <p class="error" aria-live="polite"></p>
-    </div>
-    <div class="field">
-      <label for="password">Contraseña</label>
-      <input id="password" name="password" type="password" autocomplete="password" required />
-      <small class="hint">con esta contraseña solo tu podras acceder</small>
-      <p class="error" aria-live="polite"></p>
-      <ul id="menu" class="menu">
-        <li><a href="../index.html" class="btn">Registrarse</a></li>
-      </ul>
-    </div>
-  </form>
-</main>
+  <main class="auth">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <label for="loginEmail">Correo:</label>
+      <input type="email" id="loginEmail" required>
 
-<footer class="site-footer">
-  <small>© <span id="year"></span> Pastelería Mil Sabores.</small>
-</footer>
-<script src="../assets/validate.js" defer></script>
+      <label for="loginPassword">Contraseña:</label>
+      <input type="password" id="loginPassword" required>
+
+      <button type="submit" class="btn">Entrar</button>
+    </form>
+
+    <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Pastelería Mil Sabores.</small>
+  </footer>
+
+<script>
+  // Año automático
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Simulación login
+  document.getElementById("loginForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const email = document.getElementById("loginEmail").value;
+    const pwd = document.getElementById("loginPassword").value;
+
+    // Verifica si el usuario existe en localStorage
+    if(localStorage.getItem(email) === pwd){
+      alert("✅ Bienvenido de nuevo, " + email);
+
+      // Redirige a la página principal
+window.location.href = "../index.html";
+
+    } else {
+      alert("❌ Usuario o contraseña incorrecta.");
+    }
+  });
+</script>
 </body>
 </html>
