@@ -75,6 +75,7 @@
       <h2>PI001 - Mousse de Chocolate</h2>
       <p class="precio">$5.000 CLP</p>
       <p class="descripcion">Postre individual cremoso y suave, hecho con chocolate de alta calidad.</p>
+
     </article>
 
     <article class="producto" data-cat="postres-individuales">
@@ -99,17 +100,108 @@
       <p class="descripcion">Suave y cremoso, perfecto para disfrutar sin culpa.</p>
     </article>
 
-    <!-- Puedes agregar el resto de categorías de la misma forma -->
+        <!-- Pastelería Tradicional -->
+    <article class="producto" data-cat="pasteleria-tradicional">
+      <img src="https://i.pinimg.com/736x/b4/e4/7d/b4e47d6e777bfde9e072f2ffe096c1ef.jpg" alt="Empanada de Manzana" />
+      <h2>PT001 - Empanada de Manzana</h2>
+      <p class="precio">$3.000 CLP</p>
+      <p class="descripcion">Pastelería tradicional rellena de manzanas especiadas, perfecta para un dulce desayuno o merienda.</p>
+    </article>
+
+    <article class="producto" data-cat="pasteleria-tradicional">
+      <img src="https://i.pinimg.com/736x/e2/06/b7/e206b7fb62aedabd77b62a513192499f.jpg" alt="Tarta de Santiago" />
+      <h2>PT002 - Tarta de Santiago</h2>
+      <p class="precio">$6.000 CLP</p>
+      <p class="descripcion">Tradicional tarta española hecha con almendras, azúcar y huevos, una delicia clásica.</p>
+    </article>
+
+    <!-- Productos Sin Gluten -->
+    <article class="producto" data-cat="sin-gluten">
+      <img src="https://i.pinimg.com/736x/60/f5/a5/60f5a5ce8775a0fcc170194b69793597.jpg" alt="Brownie Sin Gluten" />
+      <h2>PG001 - Brownie Sin Gluten</h2>
+      <p class="precio">$4.000 CLP</p>
+      <p class="descripcion">Rico y denso, este brownie es perfecto para quienes evitan el gluten sin sacrificar el sabor.</p>
+    </article>
+
+    <article class="producto" data-cat="sin-gluten">
+      <img src="https://i.pinimg.com/736x/20/f0/1a/20f01a160ee9bd1060e95f02a222d40b.jpg" alt="Pan Sin Gluten" />
+      <h2>PG002 - Pan Sin Gluten</h2>
+      <p class="precio">$3.500 CLP</p>
+      <p class="descripcion">Suave y esponjoso, ideal para sándwiches o para acompañar cualquier comida.</p>
+    </article>
+
+    <!-- Productos Vegana -->
+    <article class="producto" data-cat="vegana">
+      <img src="https://i.pinimg.com/1200x/ca/1b/c2/ca1bc26d0dfe365207cf7a01b08995a4.jpg" alt="Torta Vegana de Chocolate" />
+      <h2>PV001 - Torta Vegana de Chocolate</h2>
+      <p class="precio">$50.000 CLP</p>
+      <p class="descripcion">Torta de chocolate húmeda y deliciosa, hecha sin productos de origen animal, perfecta para veganos.</p>
+    </article>
+
+    <article class="producto" data-cat="vegana">
+      <img src="https://i.pinimg.com/1200x/f4/d7/e2/f4d7e20d8ecbe5b5da7a78c4ce56fe4d.jpg" alt="Galletas Veganas de Avena" />
+      <h2>PV002 - Galletas Veganas de Avena</h2>
+      <p class="precio">$4.500 CLP</p>
+      <p class="descripcion">Crujientes y sabrosas, estas galletas son una excelente opción saludable y vegana.</p>
+    </article>
+
+    <!-- Tortas Especiales -->
+    <article class="producto" data-cat="tortas-especiales">
+      <img src="https://i.pinimg.com/736x/ea/2f/c2/ea2fc20aa861070fd19d4d11330fa2bb.jpg" alt="Torta Especial de Cumpleaños" />
+      <h2>TE001 - Torta Especial de Cumpleaños</h2>
+      <p class="precio">$55.000 CLP</p>
+      <p class="descripcion">Diseñada para celebraciones, personalizable con decoraciones y mensajes únicos.</p>
+    </article>
+
+    <article class="producto" data-cat="tortas-especiales">
+      <img src="https://i.pinimg.com/736x/91/b8/8e/91b88e2b5ff9842104ed2262c453564a.jpg" alt="Torta Especial de Boda" />
+      <h2>TE002 - Torta Especial de Boda</h2>
+      <p class="precio">$60.000 CLP</p>
+      <p class="descripcion">Elegante y deliciosa, esta torta está diseñada para ser el centro de atención en cualquier boda.</p>
+    </article>
+
+
 
   </section>
 </main>
+
+<section class="info-extra">
+  <h2>Información Extra para el Usuario</h2>
+
+  <article class="origen">
+    <h3>Origen de productos</h3>
+    <p>
+      Nuestras recetas tradicionales provienen de generaciones de reposteros artesanales,
+      manteniendo el sabor y la autenticidad de la pastelería clásica. Cada producto es elaborado
+      con ingredientes seleccionados y un profundo respeto por la tradición.
+    </p>
+  </article>
+
+  <article class="recomendaciones">
+    <h3>Recomendaciones personalizadas</h3>
+    <p id="recomendacion">
+      Explora nuestro catálogo y te daremos sugerencias según lo que más te guste. 🍰
+    </p>
+  </article>
+
+  <article class="impacto">
+    <h3>Impacto Comunitario</h3>
+    <p>
+      Con cada compra apoyas a los estudiantes de la
+      <strong>Escuela de Administración y Negocios</strong>, quienes participan en la elaboración
+      y perfeccionamiento de nuestras recetas. Además, contribuyes al desarrollo de la comunidad local.
+    </p>
+  </article>
+</section>
 
 <footer class="site-footer">
   <small>© <span id="year"></span> Pastelería Mil Sabores.</small>
 </footer>
 
 <script>
-  // Filtro por categoría
+
+  // --- FILTRO DE CATEGORÍAS ---
+
   const chips = document.querySelectorAll('.chip');
   chips.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -119,11 +211,43 @@
       });
       chips.forEach(c => c.classList.remove('active'));
       btn.classList.add('active');
+
+      // --- ACTUALIZAR RECOMENDACIÓN SEGÚN CATEGORÍA ---
+      const recomendacion = document.getElementById('recomendacion');
+      switch (cat) {
+        case 'tortas-cuadradas':
+          recomendacion.textContent = "Si te gustan las tortas cuadradas, prueba la Torta de Chocolate con Avellanas 🍫.";
+          break;
+        case 'tortas-circulares':
+          recomendacion.textContent = "Las tortas circulares son ideales para celebraciones. Te recomendamos la Torta de Manjar 🎉.";
+          break;
+        case 'postres-individuales':
+          recomendacion.textContent = "¿Algo ligero? Prueba el Tiramisú Clásico o el Mousse de Chocolate 🍮.";
+          break;
+        case 'sin-azucar':
+          recomendacion.textContent = "Para una opción saludable, te sugerimos el Cheesecake Sin Azúcar 🍰.";
+          break;
+        case 'pasteleria-tradicional':
+          recomendacion.textContent = "Si disfrutas lo clásico, prueba la Tarta de Santiago o la Empanada de Manzana 🥧.";
+          break;
+        case 'sin-gluten':
+          recomendacion.textContent = "Te recomendamos el Brownie Sin Gluten o nuestro Pan artesanal libre de gluten 🌾🚫.";
+          break;
+        case 'vegana':
+          recomendacion.textContent = "¿Prefieres opciones veganas? Te encantará la Torta Vegana de Chocolate o las Galletas de Avena 🌱.";
+          break;
+        case 'tortas-especiales':
+          recomendacion.textContent = "Para ocasiones únicas, prueba la Torta Especial de Cumpleaños o la de Boda 🎂.";
+          break;
+        default:
+          recomendacion.textContent = "Explora nuestro catálogo y te daremos sugerencias según lo que más te guste. 🍰";
+      }
     });
   });
 
-  // Año en el footer
+  // --- AÑO EN EL FOOTER ---
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
+

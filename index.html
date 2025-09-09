@@ -24,6 +24,12 @@
   </nav>
 </header>
 
+<div class="usuario-header">
+  <span id="usuarioNombre"></span>
+  <button id="logoutBtn" class="btn">Cerrar Sesión</button>
+</div>
+
+
 <main id="main">
   <section class="hero">
     <div class="hero__content">
@@ -62,33 +68,88 @@
   </section>
 </main>
 
+<section class="comunidad">
+  <h2>Contenido Educativo y de Comunidad</h2>
+  <p>Descubre recetas, consejos y colaboraciones de nuestros estudiantes de gastronomía.</p>
+
+  <div class="grid-cards">
+    <article class="card-blog">
+      <img src="https://i.pinimg.com/736x/3d/cb/7f/3dcb7f9278e3c686155ab774ca907fda.jpg" alt="Receta de kuchen tradicional">
+      <h3>Kuchen Tradicional Alemán</h3>
+      <p>Aprende a preparar un delicioso kuchen de manzana, con una receta paso a paso compartida por nuestros estudiantes.</p>
+      <a href="#" class="btn btn-secondary">Leer más</a>
+    </article>
+
+    <article class="card-blog">
+      <img src="https://i.pinimg.com/1200x/fd/29/d0/fd29d069389e1d5226c2c09cf00dfa6e.jpg" alt="Consejos de repostería saludable">
+      <h3>Repostería Saludable</h3>
+      <p>Consejos prácticos para reducir azúcar y grasas en tus preparaciones sin perder el sabor.</p>
+      <a href="#" class="btn btn-secondary">Leer más</a>
+    </article>
+
+    <article class="card-blog">
+      <img src="https://i.pinimg.com/1200x/90/11/7a/90117af3e120f7e60a599e77d82e8443.jpg" alt="Colaboración estudiantil">
+      <h3>Colaboraciones Estudiantiles</h3>
+      <p>Nuestros estudiantes comparten su experiencia creando postres únicos e innovadores.</p>
+      <a href="#" class="btn btn-secondary">Leer más</a>
+    </article>
+  </div>
+</section>
+
+
 <footer class="site-footer">
   <div class="footer-grid">
     <section>
       <h3>Mil Sabores</h3>
-      <p>Av. Ejemplo 123, Santiago, Chile</p>
+      <p>ABlanco Encalada 1335, Renca, Santiago , Chile</p>
       <p>Horario: Lun–Sáb 9:00–19:00</p>
     </section>
     <section>
       <h3>Contacto</h3>
       <ul>
-        <li><a href="tel:+56912345678">+56 9 1234 5678</a></li>
-        <li><a href="mailto:contacto@milsabores.cl">contacto@milsabores.cl</a></li>
+        <li><a href="tel:+56912345678">+56 9 78136844</a></li>
+        <li><a href="mailto:contacto@milsabores.cl">ignacio.escalona@milsabores.cl</a></li>
         <li><a href="pages/contacto.html">Formulario</a></li>
       </ul>
     </section>
     <section>
       <h3>Síguenos</h3>
       <ul class="social">
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">TikTok</a></li>
+        <li><a href="#">Instagram:PASTELERIA_MIL_SABORES_INC</a></li>
+        <li><a href="#">Facebook:PASTELERIA_MIL_SABORES</a></li>
+        <li><a href="#">TikTok:PASTELERIA_MIL_CHISPOT</a></li>
       </ul>
     </section>
   </div>
   <small>© <span id="year"></span> Pastelería Mil Sabores. Todos los derechos reservados.</small>
 </footer>
 
-<script src="assets/validate.js" defer></script>
-</body>
-</html>
+<script>
+  // Año automático
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Verifica si hay usuario logueado
+  const usuario = localStorage.getItem("usuarioLogueado");
+  const loginMenu = document.getElementById("loginMenu");
+  const usuarioHeader = document.getElementById("usuarioHeader");
+  const usuarioNombre = document.getElementById("usuarioNombre");
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  if(usuario){
+    // Oculta "Iniciar Sesión"
+    loginMenu.style.display = "none";
+
+    // Muestra el usuario y botón de cerrar sesión
+    usuarioHeader.style.display = "inline-flex";
+    usuarioNombre.textContent = "Hola, " + usuario;
+
+    // Evento cerrar sesión
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("usuarioLogueado");
+      alert("Has cerrado sesión.");
+      window.location.reload();
+    });
+  }
+</script>
+
+

@@ -5,30 +5,177 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nosotros — Mil Sabores</title>
   <link rel="stylesheet" href="../assets/styles.css" />
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== ESTILOS BASE ===== */
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background-color: #FFF5E1; /* Crema Pastel */
+      color: #5D4037; /* Marrón Oscuro */
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      font-family: 'Pacifico', cursive;
+      margin-bottom: 0.5em;
+      color: #8B4513; /* Chocolate */
+    }
+
+    p {
+      max-width: 700px;
+      margin: 0 auto 1.5em auto;
+      font-size: 1.1rem;
+    }
+
+    header.site-header {
+      padding: 1rem 2rem;
+      background: #FFC0CB; /* Rosa Suave */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .brand img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #5D4037;
+      font-weight: bold;
+    }
+
+    nav a.btn {
+      background: #8B4513; /* Chocolate */
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+
+    nav a.btn:hover {
+      background: #5D4037;
+    }
+
+    /* ===== CONTENIDO ===== */
+    .page-header {
+      padding: 3rem 1rem;
+    }
+
+    .mision-vision {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+
+    .mision-vision article {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .mision-vision p {
+      color: #5D4037;
+    }
+
+    /* Texto secundario (si necesitas más adelante) */
+    .secondary {
+      color: #B0BEC5; /* Gris Claro */
+    }
+
+    /* ===== FOOTER ===== */
+    footer.site-footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      background: #FFC0CB;
+      color: #5D4037;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 768px) {
+      .mision-vision {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 <body>
 <header class="site-header">
-  <a class="brand" href="../index.html"><img src="../media/logo.png" alt="Logo Pastelería Mil Sabores" /><span></span></a>
-  <nav aria-label="principal">
+
+  <a class="brand" href="../index.html">
+    <img src="../media/logo.png" alt="Logo Pastelería Mil Sabores" />
+    <span class="sr-only">Pastelería Mil Sabores</span>
+  </a>
+  <nav aria-label="Menú principal">
     <ul id="menu" class="menu">
       <li><a href="../index.html">Inicio</a></li>
       <li><a href="productos.html">Catálogo</a></li>
-      <li><a aria-current="page" href="">Nosotros</a></li>
+      <li><a aria-current="page" href="#">Nosotros</a></li>
       <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="login.html" class="btn">Iniciar Sesion</a></li>
+      <li><a href="login.html" class="btn">Iniciar Sesión</a></li>
     </ul>
   </nav>
 </header>
+
 <main id="main">
   <section class="page-header">
     <h1>Nuestra historia</h1>
     <article>
-      <p>Desde 2012 endulzando momentos especiales… (reemplaza por contenido del caso).</p>
+      <p>
+        Somos un referente en la repostería chilena, reconocidos por nuestra participación 
+        en un récord Guinness en 1995, cuando colaboramos en la creación de la 
+        torta más grande del mundo.
+      </p>
+    </article>
+  </section>
+
+  <section class="mision-vision">
+    <article>
+      <h2>Misión</h2>
+      <p>
+        Ofrecer una experiencia dulce y memorable a nuestros clientes, proporcionando tortas y 
+        productos de repostería de alta calidad para todas las ocasiones.
+      </p>
+    </article>
+
+    <article>
+      <h2>Visión</h2>
+      <p>
+        Convertirnos en la tienda online líder de productos de repostería en Chile, reconocida por 
+        nuestra innovación, calidad y el impacto positivo en la comunidad, especialmente en la 
+        formación de nuevos talentos en gastronomía.
+      </p>
     </article>
   </section>
 </main>
+
 <footer class="site-footer">
-  <small>© <span id="year"></span> Pastelería Mil Sabores.</small>
+  <small>© <span id="year"></span> Pastelería Mil Sabores. Todos los derechos reservados.</small>
 </footer>
+
+<script>
+  // Año dinámico en el footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
