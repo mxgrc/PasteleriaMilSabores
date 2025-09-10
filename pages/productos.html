@@ -39,7 +39,6 @@
 
   <section class="grid productos">
 
-    <!-- Ejemplo: Tortas Cuadradas -->
     <article class="producto" data-cat="tortas-cuadradas">
       <img src="https://i.pinimg.com/736x/d1/e6/49/d1e649ae8884cf9e8eeba48c2599db89.jpg" alt="Torta Cuadrada de Chocolate" />
       <h2>TC001 - Torta Cuadrada de Chocolate</h2>
@@ -54,7 +53,6 @@
       <p class="descripcion">Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de vainilla, ideal para celebraciones.</p>
     </article>
 
-    <!-- Tortas Circulares -->
     <article class="producto" data-cat="tortas-circulares">
       <img src="https://i.pinimg.com/736x/3e/68/56/3e68563b22627593ca68d5c3f32ac9d1.jpg" alt="Torta Circular de Vainilla" />
       <h2>TT001 - Torta Circular de Vainilla</h2>
@@ -69,7 +67,6 @@
       <p class="descripcion">Torta tradicional chilena con manjar y nueces, un deleite para los amantes de los sabores clásicos.</p>
     </article>
 
-    <!-- Postres Individuales -->
     <article class="producto" data-cat="postres-individuales">
       <img src="https://i.pinimg.com/1200x/f4/ce/e5/f4cee5e7149731cc9dd440115a194fbf.jpg" alt="Mousse de Chocolate" />
       <h2>PI001 - Mousse de Chocolate</h2>
@@ -85,7 +82,6 @@
       <p class="descripcion">Postre italiano con capas de café, mascarpone y cacao, perfecto para finalizar cualquier comida.</p>
     </article>
 
-    <!-- Productos Sin Azúcar -->
     <article class="producto" data-cat="sin-azucar">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoUo8-HIVi28cZg_s7f6Jpo2rKpT5AmPO7zw&s" alt="Torta Sin Azúcar de Naranja" />
       <h2>PSA001 - Torta Sin Azúcar de Naranja</h2>
@@ -100,7 +96,6 @@
       <p class="descripcion">Suave y cremoso, perfecto para disfrutar sin culpa.</p>
     </article>
 
-        <!-- Pastelería Tradicional -->
     <article class="producto" data-cat="pasteleria-tradicional">
       <img src="https://i.pinimg.com/736x/b4/e4/7d/b4e47d6e777bfde9e072f2ffe096c1ef.jpg" alt="Empanada de Manzana" />
       <h2>PT001 - Empanada de Manzana</h2>
@@ -115,7 +110,6 @@
       <p class="descripcion">Tradicional tarta española hecha con almendras, azúcar y huevos, una delicia clásica.</p>
     </article>
 
-    <!-- Productos Sin Gluten -->
     <article class="producto" data-cat="sin-gluten">
       <img src="https://i.pinimg.com/736x/60/f5/a5/60f5a5ce8775a0fcc170194b69793597.jpg" alt="Brownie Sin Gluten" />
       <h2>PG001 - Brownie Sin Gluten</h2>
@@ -130,7 +124,6 @@
       <p class="descripcion">Suave y esponjoso, ideal para sándwiches o para acompañar cualquier comida.</p>
     </article>
 
-    <!-- Productos Vegana -->
     <article class="producto" data-cat="vegana">
       <img src="https://i.pinimg.com/1200x/ca/1b/c2/ca1bc26d0dfe365207cf7a01b08995a4.jpg" alt="Torta Vegana de Chocolate" />
       <h2>PV001 - Torta Vegana de Chocolate</h2>
@@ -145,7 +138,6 @@
       <p class="descripcion">Crujientes y sabrosas, estas galletas son una excelente opción saludable y vegana.</p>
     </article>
 
-    <!-- Tortas Especiales -->
     <article class="producto" data-cat="tortas-especiales">
       <img src="https://i.pinimg.com/736x/ea/2f/c2/ea2fc20aa861070fd19d4d11330fa2bb.jpg" alt="Torta Especial de Cumpleaños" />
       <h2>TE001 - Torta Especial de Cumpleaños</h2>
@@ -200,7 +192,6 @@
 
 <script>
 
-  // --- FILTRO DE CATEGORÍAS ---
 
   const chips = document.querySelectorAll('.chip');
   chips.forEach(btn => {
@@ -212,7 +203,6 @@
       chips.forEach(c => c.classList.remove('active'));
       btn.classList.add('active');
 
-      // --- ACTUALIZAR RECOMENDACIÓN SEGÚN CATEGORÍA ---
       const recomendacion = document.getElementById('recomendacion');
       switch (cat) {
         case 'tortas-cuadradas':
@@ -245,7 +235,6 @@
     });
   });
 
-  // --- AÑO EN EL FOOTER ---
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>

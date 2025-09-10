@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #FFF5E1;
+  color: #5D4037;
+  line-height: 1.6;
+}
+
+header.site-header {
+  padding: 1rem 2rem;
+  background: #FFC0CB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #5D4037;
+  font-weight: bold;
+}
+
+nav a.btn {
+  background: #8B4513;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+
+nav a.btn:hover {
+  background: #5D4037;
+}
+
+.page-header {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.filters {
+  margin-top: 1rem;
+}
+
+.chip {
+  background: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin: 0.2rem;
+  cursor: pointer;
+}
+
+.chip.active {
+  background: #8B4513;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.producto {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.precio {
+  font-weight: bold;
+  color: #8B4513;
+}
+
+.info-extra {
+  padding: 2rem;
+  background: #f9f9f9;
+}
+
+.info-extra h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+footer.site-footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  background: #FFC0CB;
+  color: #5D4037;
+  text-align: center;
+}

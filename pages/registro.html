@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="site-header">
-    <h1>🍰 Pastelería Mil Sabores</h1>
+    <h1> Pastelería Mil Sabores</h1>
   </header>
 
   <main class="auth">
@@ -38,7 +38,6 @@
   </footer>
 
   <script>
-    // Año automático
     document.getElementById('year').textContent = new Date().getFullYear();
 
     document.getElementById("registerForm").addEventListener("submit", e => {
@@ -50,24 +49,20 @@
       const age = parseInt(document.getElementById("age").value);
       const code = document.getElementById("code").value.trim();
 
-      let beneficio = "🎂 Bienvenido " + name + "!";
+      let beneficio = " Bienvenido " + name + "!";
 
-      // Descuento por edad
       if(age >= 50){
         beneficio += "\nObtienes 50% de descuento en todos los productos.";
       }
 
-      // Código FELICES50
       if(code.toUpperCase() === "FELICES50"){
-        beneficio += "\n🎉 Obtienes 10% de descuento de por vida.";
+        beneficio += "\n Obtienes 10% de descuento de por vida.";
       }
 
-      // Correo institucional DUOC
       if(email.endsWith("@duocuc.cl")){
-        beneficio += "\n🎁 Torta GRATIS en tu cumpleaños por ser estudiante DUOC.";
+        beneficio += "\n Torta GRATIS en tu cumpleaños por ser estudiante DUOC.";
       }
 
-      // Guardar en localStorage simulando DB
       localStorage.setItem(email, pwd);
 
       alert(beneficio + "\nYa puedes iniciar sesión.");

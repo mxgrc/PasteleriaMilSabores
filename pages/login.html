@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="site-header">
-    <h1>🍰 Pastelería Mil Sabores</h1>
+    <h1> Pastelería Mil Sabores</h1>
   </header>
 
   <main class="auth">
@@ -31,24 +31,20 @@
   </footer>
 
 <script>
-  // Año automático
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Simulación login
   document.getElementById("loginForm").addEventListener("submit", e => {
     e.preventDefault();
     const email = document.getElementById("loginEmail").value;
     const pwd = document.getElementById("loginPassword").value;
 
-    // Verifica si el usuario existe en localStorage
     if(localStorage.getItem(email) === pwd){
-      alert("✅ Bienvenido de nuevo, " + email);
+      alert(" Bienvenido de nuevo, " + email);
 
-      // Redirige a la página principal
 window.location.href = "../index.html";
 
     } else {
-      alert("❌ Usuario o contraseña incorrecta.");
+      alert(" Usuario o contraseña incorrecta.");
     }
   });
 </script>
