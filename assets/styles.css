@@ -416,3 +416,18 @@ body {
   color: #555;
 
 }
+.mision-vision {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  
+}
+
+@media (min-width: 768px) {
+  .mision-vision {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
