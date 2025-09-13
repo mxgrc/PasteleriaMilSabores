@@ -34,11 +34,21 @@ img {
 }
 
 a {
-  color: var(--acento-choco);
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 a:hover {
+  color: var(--texto);
+}
+
+b {
+  color: var(--acento-choco);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+b:hover {
   color: var(--texto);
 }
 /* ==========================
@@ -67,6 +77,19 @@ a:hover {
 }
 .btn-secondary:hover {
   background: #f7a9b7;
+}
+.chip {
+  background: var(--acento-rosa);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin: 0.2rem;
+  cursor: pointer;
+}
+
+.chip.active {
+  background: #ff6699;
+  color: white;
 }
 /* ==========================
    ENCABEZADO
@@ -343,6 +366,7 @@ body {
   margin: 0;
   font-size: 2rem;
 }
+
 /* ===== Formulario de login ===== */
 .auth {
   max-width: 380px;
