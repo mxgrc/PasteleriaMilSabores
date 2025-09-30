@@ -39,26 +39,9 @@ a {
   text-decoration: none;
   transition: color .3s ease;
 }
-<<<<<<< HEAD
-a:hover {
-  color: var(--texto);
-}
-
-b {
-  color: var(--acento-choco);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-b:hover {
-  color: var(--texto);
-}
-/* ==========================
-=======
 a:hover { color: var(--texto); }
 
 /* =========================================================
->>>>>>> dev/mxgrc
    BOTONES
    ========================================================= */
 .btn {
@@ -86,33 +69,11 @@ a:hover { color: var(--texto); }
   background: var(--acento-rosa);
   color: var(--texto);
 }
-<<<<<<< HEAD
-.btn-secondary:hover {
-  background: #f7a9b7;
-}
-.chip {
-  background: var(--acento-rosa);
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  margin: 0.2rem;
-  cursor: pointer;
-}
-
-.chip.active {
-  background: #ff6699;
-  color: white;
-}
-/* ==========================
-   ENCABEZADO
-   ========================== */
-=======
 .btn-secondary:hover { background: #f7a9b7; }
 
 /* =========================================================
    ENCABEZADO (Header)
    ========================================================= */
->>>>>>> dev/mxgrc
 .site-header {
   position: sticky;
   top: 0;
@@ -352,14 +313,10 @@ p {
   nav ul.menu { flex-wrap: wrap; justify-content: center; }
 }
 
-<<<<<<< HEAD
-/* ===== Formulario de login ===== */
-=======
 /* =========================================================
    AUTH (Login/Registro) — sin sobrescribir el tema global
    ========================================================= */
 /* Usa el mismo tema; sólo estructura del contenedor de auth */
->>>>>>> dev/mxgrc
 .auth {
   max-width: 380px;
   margin: 3rem auto;
@@ -391,26 +348,7 @@ p {
   outline: none;
 }
 
-<<<<<<< HEAD
-}
-.mision-vision {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 2rem 1rem;
-  
-}
-
-@media (min-width: 768px) {
-  .mision-vision {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-}
-=======
 /* Sugerencia: usa .btn-primary (café) para el botón de enviar */
 .auth p { margin-top: 1.5rem; font-size: .9rem; }
 .auth a { color: var(--acento-choco); font-weight: bold; }
 .auth a:hover { text-decoration: underline; }
->>>>>>> dev/mxgrc
