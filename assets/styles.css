@@ -1,24 +1,28 @@
-
-
+/* =========================================================
+   PALETA Y VARIABLES GLOBALES (tema "Nosotros")
+   ========================================================= */
 :root {
   --max: 1100px;
   --gap: 1rem;
+
   /* Colores principales */
-  --fondo: #FFF5E1;       /* Crema Pastel */
-  --acento-rosa: #FFC0CB; /* Rosa Suave */
-  --acento-choco: #8B4513;/* Chocolate */
-  --texto: #5D4037;       /* Marrón Oscuro */
-  --texto-sec: #B0BEC5;   /* Gris Claro */
+  --fondo: #FFF5E1;        /* Crema pastel */
+  --acento-rosa: #FFC0CB;  /* Rosa pastel */
+  --acento-choco: #8B4513; /* Café/chocolate */
+  --texto: #5D4037;        /* Marrón oscuro */
+  --texto-sec: #B0BEC5;    /* Gris claro */
+
+  /* Alias opcional para títulos de secciones que usaban --brand */
+  --brand: var(--acento-choco);
 }
-/* ==========================
-   RESET Y BASE
-   ========================== */
-* {
-  box-sizing: border-box;
-}
-html {
-  scroll-behavior: smooth;
-}
+
+/* =========================================================
+   RESET + BASE
+   ========================================================= */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+/* Base uniforme para todas las páginas */
 body {
   margin: 0;
   font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
@@ -28,22 +32,18 @@ body {
   text-align: center;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
+img { max-width: 100%; display: block; }
 
 a {
   color: var(--acento-choco);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color .3s ease;
 }
-a:hover {
-  color: var(--texto);
-}
-/* ==========================
+a:hover { color: var(--texto); }
+
+/* =========================================================
    BOTONES
-   ========================== */
+   ========================================================= */
 .btn {
   display: inline-block;
   padding: .6rem 1rem;
@@ -51,8 +51,10 @@ a:hover {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background .3s ease, transform .2s ease;
 }
+
+/* Botón principal café (recomendado para CTA como "Iniciar Sesión") */
 .btn-primary {
   background: var(--acento-choco);
   color: #fff;
@@ -61,32 +63,32 @@ a:hover {
   background: #5D4037;
   transform: scale(1.05);
 }
+
+/* Botón secundario rosa pastel */
 .btn-secondary {
   background: var(--acento-rosa);
   color: var(--texto);
 }
-.btn-secondary:hover {
-  background: #f7a9b7;
-}
-/* ==========================
-   ENCABEZADO
-   ========================== */
+.btn-secondary:hover { background: #f7a9b7; }
+
+/* =========================================================
+   ENCABEZADO (Header)
+   ========================================================= */
 .site-header {
   position: sticky;
   top: 0;
-  background: var(--acento-rosa);
+  background: var(--acento-rosa); /* Rosa pastel del tema */
   border-bottom: 2px solid var(--acento-choco);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-
   padding: .8rem 1.5rem;
+  z-index: 100;
 }
-.brand img {
-  height: 70px;
-  width: auto;
-}
+
+.brand img { height: 70px; width: auto; }
+
 .menu {
   list-style: none;
   display: flex;
@@ -98,33 +100,27 @@ a:hover {
   text-decoration: underline;
   font-weight: bold;
 }
-/* ==========================
-   TITULOS Y TIPOGRAFÍA
-   ========================== */
+
+/* =========================================================
+   TIPOGRAFÍA
+   ========================================================= */
 h1, h2, h3 {
   font-family: 'Pacifico', cursive;
-  margin: 0.5em 0;
+  margin: .5em 0;
 }
-h1 {
-  font-size: 2.2rem;
-  color: var(--acento-choco);
-}
-h2 {
-  font-size: 1.8rem;
-  color: var(--texto);
-}
-h3 {
-  font-size: 1.4rem;
-  color: var(--acento-choco);
-}
+h1 { font-size: 2.2rem; color: var(--acento-choco); }
+h2 { font-size: 1.8rem; color: var(--texto); }
+h3 { font-size: 1.4rem; color: var(--acento-choco); }
+
 p {
   max-width: 700px;
   margin: 0 auto 1.2em auto;
   font-size: 1.05rem;
 }
-/* ==========================
-   SECCIONES GENERALES
-   ========================== */
+
+/* =========================================================
+   SECCIONES GENERALES / LAYOUTS
+   ========================================================= */
 .page-header {
   max-width: var(--max);
   margin: 2rem auto;
@@ -141,7 +137,6 @@ p {
   margin: auto;
 }
 
-
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -157,10 +152,10 @@ p {
   background: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,.1);
 }
-/* ==========================
-   PRODUCTOS
-   ========================== */
 
+/* =========================================================
+   PRODUCTOS
+   ========================================================= */
 .grid.productos {
   max-width: var(--max);
   margin: auto;
@@ -171,18 +166,17 @@ p {
 }
 
 .producto {
-
   border-radius: 1rem;
   padding: 1rem;
   display: grid;
   gap: .5rem;
-
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-/* ==========================
-   FORMULARIOS
-   ========================== */
+
+/* =========================================================
+   FORMULARIOS (contacto, checkout, etc.)
+   ========================================================= */
 .form {
   max-width: 700px;
   margin: 2rem auto;
@@ -193,17 +187,16 @@ p {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,.1);
 }
-.field {
-  display: grid;
-  gap: .35rem;
-  text-align: left;
-}
+
+.field { display: grid; gap: .35rem; text-align: left; }
+
 .field input,
 .field select,
 .field textarea {
   padding: .65rem .75rem;
   border: 1px solid #ccc;
   border-radius: .6rem;
+  font: inherit;
 }
 
 .field input:focus,
@@ -212,18 +205,13 @@ p {
   outline: 2px solid var(--acento-rosa);
   border-color: var(--acento-choco);
 }
-.hint {
-  color: var(--texto-sec);
-  font-size: .9rem;
-}
-.error {
-  color: #b00020;
-  min-height: 1em;
-}
 
-/* ==========================
-   SECCIÓN INFO EXTRA
-   ========================== */
+.hint { color: var(--texto-sec); font-size: .9rem; }
+.error { color: #b00020; min-height: 1em; }
+
+/* =========================================================
+   SECCIÓN INFO EXTRA (bloques informativos)
+   ========================================================= */
 .info-extra {
   margin: 3rem auto;
   padding: 2rem;
@@ -239,38 +227,14 @@ p {
 }
 .info-extra h3 {
   font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
   color: var(--texto);
 }
-.info-extra article {
-  margin-bottom: 1.5rem;
-}
-/* ==========================
-   FOOTER
-   ========================== */
-.site-footer {
-  margin-top: 3rem;
-  padding: 1.5rem 1rem;
-  background: var(--acento-rosa);
-  color: var(--texto);
-  border-top: 2px solid var(--acento-choco);
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--gap);
-  max-width: var(--max);
-  margin: auto;
-}
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-  nav ul.menu {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
+.info-extra article { margin-bottom: 1.5rem; }
+
+/* =========================================================
+   COMUNIDAD / BLOG
+   ========================================================= */
 .comunidad {
   margin: 3rem auto;
   max-width: var(--max);
@@ -279,7 +243,7 @@ p {
 .comunidad h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: var(--brand);
+  color: var(--brand); /* alias → chocolate */
   text-align: center;
 }
 .comunidad p {
@@ -287,11 +251,13 @@ p {
   margin-bottom: 2rem;
   color: #555;
 }
+
 .grid-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--gap);
 }
+
 .card-blog {
   background: #fff;
   border: 1px solid #eee;
@@ -320,30 +286,37 @@ p {
   margin: 1rem;
   align-self: start;
 }
-/* ==========================
-   login y register
-   ========================== */
-/* --- Formularios de Login/Registro --- */
-/* ===== Estilos generales ===== */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #ffe6f0, #fff5e6);
-  color: #333;
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  margin-top: 3rem;
+  padding: 1.5rem 1rem;
+  background: var(--acento-rosa);
+  color: var(--texto);
+  border-top: 2px solid var(--acento-choco);
 }
-/* ===== Header ===== */
-.site-header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #ff6699;
-  color: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--gap);
+  max-width: var(--max);
+  margin: auto;
 }
-.site-header h1 {
-  margin: 0;
-  font-size: 2rem;
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  nav ul.menu { flex-wrap: wrap; justify-content: center; }
 }
-/* ===== Formulario de login ===== */
+
+/* =========================================================
+   AUTH (Login/Registro) — sin sobrescribir el tema global
+   ========================================================= */
+/* Usa el mismo tema; sólo estructura del contenedor de auth */
 .auth {
   max-width: 380px;
   margin: 3rem auto;
@@ -353,66 +326,29 @@ body {
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
   text-align: center;
 }
-.auth h2 {
-  margin-bottom: 1.5rem;
-  color: #444;
-}
-/* Labels e inputs */
+.auth h2 { margin-bottom: 1.5rem; color: #444; }
+
 .auth label {
   display: block;
   text-align: left;
   font-weight: bold;
-  margin: 0.8rem 0 0.3rem;
+  margin: .8rem 0 .3rem;
 }
 .auth input {
   width: 100%;
-  padding: 0.8rem;
-  border-radius: 0.6rem;
+  padding: .8rem;
+  border-radius: .6rem;
   border: 1px solid #ccc;
   font-size: 1rem;
-  transition: 0.2s;
+  transition: .2s;
 }
 .auth input:focus {
-  border-color: #ff6699;
-  box-shadow: 0 0 6px rgba(255,102,153,0.4);
+  border-color: var(--acento-rosa);
+  box-shadow: 0 0 6px rgba(255,192,203,.4);
   outline: none;
 }
-/* Botón */
-.btn {
-  margin-top: 1.5rem;
-  padding: 0.8rem 1.5rem;
-  background: #ff6699;
-  color: white;
-  border: none;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-.btn:hover {
-  background: #e05588;
-}
-/* Enlace registro */
-.auth p {
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-}
-.auth a {
-  color: #ff6699;
-  text-decoration: none;
-  font-weight: bold;
-}
-.auth a:hover {
-  text-decoration: underline;
-}
-/* ===== Footer ===== */
-.site-footer {
-  text-align: center;
-  padding: 1rem;
-  margin-top: 3rem;
-  background: #f8f8f8;
-  font-size: 0.9rem;
-  color: #555;
 
-}
+/* Sugerencia: usa .btn-primary (café) para el botón de enviar */
+.auth p { margin-top: 1.5rem; font-size: .9rem; }
+.auth a { color: var(--acento-choco); font-weight: bold; }
+.auth a:hover { text-decoration: underline; }
